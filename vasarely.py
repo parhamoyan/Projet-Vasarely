@@ -13,9 +13,9 @@ def list_pos(c, longueur):
     return [p1,p2,p3,p4,p5,p6,p7]
 
 def hexagone(point, longueur, col, centre, rayon):
+    turtle.penup()
     listpos = list_pos(point, longueur)
-    turtle.up()
-    turtle.speed(0)
+    turtle.speed(1)
     x = point[0]
     y = point[1]
     point1 = (x, y, 0)
@@ -25,7 +25,6 @@ def hexagone(point, longueur, col, centre, rayon):
         turtle.goto(point2[0], point2[1])
         turtle.color(col[i])
         turtle.begin_fill()
-        turtle.up()
         for pos in listpos[i*2:i*2+3]:
             p = deformation((pos[0],pos[1], 0), centre, rayon)
             turtle.goto(p[0], p[1])
@@ -51,7 +50,7 @@ def pavage(inf_gauche, sup_droit, longueur, col, centre, rayon):
                 point = (x, sup_droit1)
                 hexagone(point, longueur, col, centre, rayon)
             ligne+=1
-        supdroit1 -= distance_y
+        sup_droit1 -= distance_y
 
 
 
@@ -63,6 +62,4 @@ col = ["blue", "black", "red"]
 centre = (0, 0, 0)
 rayon = 200
 pavage(inf_gauche, sup_droit, longueur, col, centre, rayon)
-turtle.getcanvas().postscript(file="vasarely.png")
 turtle.done()
-
