@@ -63,6 +63,6 @@ col = ["blue", "black", "red"]
 centre = (0, 0, 0)
 rayon = 200
 pavage(inf_gauche, sup_droit, longueur, col, centre, rayon)
-turtle.getcanvas().postscript(file="pavage_deformation1.eps")
+turtle.getcanvas().postscript(file="vasarely.png")
 turtle.done()
 
