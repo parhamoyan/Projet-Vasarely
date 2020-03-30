@@ -1,2 +1,2 @@
-# Projet-Vasarely
+# Projet Vasarely
 ![](vasarely.png)
